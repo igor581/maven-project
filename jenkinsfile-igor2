@@ -134,10 +134,10 @@ stage('install') {
     }
             steps{
                 withSonarQubeEnv('Sonar') {
-                    sh "
+                    sh '''
 		    ${scannerHome}/bin/sonar-scanner
 		    sonar-scanner -X
-		    "
+		    '''
                 }
             }
         }
